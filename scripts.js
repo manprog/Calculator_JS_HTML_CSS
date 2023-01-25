@@ -165,4 +165,17 @@ keyMultiplication.addEventListener("click", function() {display(keyMultiplicatio
 const keyEqual = document.getElementById("equal");
 keyEqual.addEventListener("click", function() {evalFunction()});
 
+const screenEnter = document.getElementById("screen");
+// screenEnter.onkeydown = function(event) {
+//     if (event.key === 'Enter'){
+//         screen.value = evalFunction();
+//     }
+// }
+screenEnter.onkeydown = pressEnter;
+function pressEnter(event){
+    if (event.key === 'Enter'){
+        screen.value = evalFunction();
+    }
+}
+
   
